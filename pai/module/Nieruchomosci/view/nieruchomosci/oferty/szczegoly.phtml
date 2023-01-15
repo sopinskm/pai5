@@ -1,0 +1,24 @@
+<h2>Szczegóły oferty <?= $oferta->numer ?></h2>
+
+<h3>Typ oferty: 
+    <?php
+        if ($oferta->typ_oferty == "W") {
+            echo "Wynajem";
+        } else {
+            echo "Sprzedaż";
+        }
+    ?>
+</h3>
+<h3>Typ nieruchomości:   
+    <?php
+        if ($oferta->typ_nieruchomosci == "D") {
+            echo "Dom";
+        } elseif ($oferta->typ_nieruchomosci == "M") {
+            echo "Mieszkanie";
+        } else {
+            echo "Grunt";
+        }
+    ?>
+</h3>
+<h3>Powierzchnia: <?= $oferta->powierzchnia ?>m</h3>
+<h3>Cena: <?= $oferta->cena ?></h3>
